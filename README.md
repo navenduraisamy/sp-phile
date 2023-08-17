@@ -1,3 +1,3 @@
 # sp-phile
 
-Angular frontend application made with **SPOTIFY** API
+Angular frontend application made with **SPOTIFY** API.
