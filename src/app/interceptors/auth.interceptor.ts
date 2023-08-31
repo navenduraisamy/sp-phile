@@ -61,7 +61,7 @@ export class AuthInterceptor implements HttpInterceptor {
 
               switchMap((response: any) => {
                 this.tokenService.setAccessToken(response.access_token);
-                this.tokenService.setRefreshToken(response.setRefreshToken);
+                // this.tokenService.setRefreshToken(response.setRefreshToken);
 
                 return next.handle(request.clone({
                   setHeaders: { "Authorization": `Bearer ${accessToken}` }

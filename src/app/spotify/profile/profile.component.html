@@ -1,1 +1,15 @@
-<p>{{ userProfile | async | json }}</p>
+<ng-container *ngIf="(userProfile | async) as profile">
+    <div class="d-flex align-items-center">
+        <div  *ngIf="profile.images.length > 0; else defaultProfilePicture">
+            <img src="{{ profile.images[0].url }}" class="profile-img" alt="profile picture">
+        </div>
+        <div class="px-2">
+            <p>{{ profile.display_name | uppercase }}</p>
+        </div>
+    </div>
+    
+</ng-container>
+
+<ng-template #defaultProfilePicture>
+    <img src="assets/koala.png" class="profile-img" alt="">
+</ng-template>

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Noto Sans Mono';
+    src: url(assets/RobotoMono-Regular.ttf) format('truetype');
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 10px !important;
+    font-family: 'Noto Sans Mono';
+}
