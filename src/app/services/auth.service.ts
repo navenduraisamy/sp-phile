@@ -53,7 +53,7 @@ export class AuthService {
       .subscribe((response: any) => {
         if (response !== null) {
           this.tokenService.setAccessToken(response.access_token);
-          this.tokenService.setRefreshToken(response.setRefreshToken);
+          this.tokenService.setRefreshToken(response.refresh_token);
           this.router.navigate(['sp-phile']);
         }
       });
@@ -64,7 +64,7 @@ export class AuthService {
 
     this.generateCodeChallenge(codeVerifier).then(codeChallenge => {
       let state = this.generateRandomString(16);
-      let scope = 'user-read-private user-read-email';
+      let scope = 'user-read-private user-read-email user-top-read';
 
       localStorage.setItem('code_verifier', codeVerifier);
 

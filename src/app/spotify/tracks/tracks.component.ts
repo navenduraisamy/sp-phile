@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { SpotifyService } from 'src/app/services/spotify.service';
 
 @Component({
   selector: 'app-tracks',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TracksComponent implements OnInit {
 
-  constructor() { }
+  topTracks$: Observable<any> = this.spotify.getTopTracksOfUser();
+  constructor(private spotify: SpotifyService) { }
 
   ngOnInit(): void {
   }
