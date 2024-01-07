@@ -1,0 +1,19 @@
+.track-item{
+    border-bottom: 1px solid rgb(230, 230, 230);
+    padding: 10px 20px;
+    width: 100%;
+    position: relative;
+
+    img{
+        border-radius: 50%;
+    }
+
+    .float-right {
+        position: absolute;
+        right: 20px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

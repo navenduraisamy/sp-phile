@@ -1,0 +1,8 @@
+<div class="d-flex align-items-center track-item">
+    <img src="{{ trackItem.album.images[0].url }}" class="mx-2" alt="" width="50px">
+    <div>
+        <p>{{ trackItem.name }}</p>
+        <small>{{ artistsName }}</small>
+    </div>
+    <span class="material-icons-outlined float-right" (click)="play(trackItem.uri)">play_arrow</span> 
+</div>

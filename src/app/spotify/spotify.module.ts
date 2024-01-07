@@ -6,7 +6,9 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { SpotifyWrapperComponent } from './spotify-wrapper/spotify-wrapper.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { SpotifyItemComponent } from './spotify-item/spotify-item.component';
+import { TrackComponent } from './track/track.component';
+import { SpotifyPlayerComponent } from './spotify-player/spotify-player.component';
+import { SafePipe } from './pipe/safe.pipe';
 
 const routes: Routes = [
   { path:"", component: SpotifyWrapperComponent }
@@ -18,7 +20,9 @@ const routes: Routes = [
     SearchBarComponent,
     NavBarComponent,
     SpotifyWrapperComponent,
-    SpotifyItemComponent
+    TrackComponent,
+    SpotifyPlayerComponent,
+    SafePipe
   ],
   imports: [
     CommonModule,

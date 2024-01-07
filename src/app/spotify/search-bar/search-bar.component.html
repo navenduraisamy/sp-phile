@@ -1,10 +1,15 @@
-<div class="search-container py-5">
+<div class="search-container py-2">
     <input type="text" class="form-control" [formControl]="searchControl">
 </div>
 
-<ng-container *ngIf="(searchResults | async ) as results"> 
-    <div *ngFor="let item of results.tracks.items">
-        {{ item.name }}
-        {{ item.popularity }}
+<div class="d-flex justify-content-center">
+    <div class="tracks-container">
+        <ng-container *ngIf="(searchResults | async ) as results"> 
+            <div *ngFor="let item of results.tracks.items">
+                <app-track [trackItem]="item"></app-track>
+            </div>
+        </ng-container>
     </div>
-</ng-container>
+</div>
+
+

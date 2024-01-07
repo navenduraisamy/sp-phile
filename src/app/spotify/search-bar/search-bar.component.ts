@@ -11,7 +11,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 export class SearchBarComponent implements OnInit {
 
   searchResults?: Observable<any>;
-  searchControl: FormControl = new FormControl<string>('');
+  searchControl: FormControl = new FormControl<string>('kaavalaya');
 
   constructor(private spotifyService: SpotifyService) { }
 

@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center" *ngIf="track">
+  <iframe
+    style="border-radius: 12px"
+    [src]="track | safe"
+    width="50%"
+    height="100"
+    frameborder="0"
+    allowfullscreen=""
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+    loading="lazy"
+  ></iframe>
+</div>
