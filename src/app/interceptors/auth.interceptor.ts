@@ -56,7 +56,7 @@ export class AuthInterceptor implements HttpInterceptor {
     return next.handle(req)
       .pipe(
         catchError((error: HttpErrorResponse) => {
-          if (error.status === 401 || error.status == 400) {
+          if (error.status === 401 || error.status == 400 || error.status == 403) {
             return refresh_token_request.pipe(
 
               switchMap((response: any) => {

@@ -13,4 +13,12 @@ export class SpotifyService {
   getProfile(): Observable<any> {
     return this.http.get("https://api.spotify.com/v1/me");
   }
+
+  getTopTracksOfUser(): Observable<any> {
+    return this.http.get('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5&offset=0');
+  }
+
+  getTopArtistsOfUser(): Observable<any> {
+    return this.http.get('https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5&offset=0');
+  }
 }
