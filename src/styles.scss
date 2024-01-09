@@ -10,7 +10,21 @@
     src: url(assets/fonts/Inter-Regular.ttf);
 }
 
+@import "variables.scss";
+
+
 body {
+    background-color: $dominant-color;
     font-family: "Inter-Regular";
+    color: #fff;
 }
 
+p {
+    margin: 0;
+}
+
+.title {
+    color: $secondary-color;
+    font-weight: bolder;
+    letter-spacing: 10px;
+  }

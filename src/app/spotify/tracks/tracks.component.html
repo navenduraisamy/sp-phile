@@ -1,1 +1,19 @@
-{{ topTracks$ | async | json }}
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h3 class="title">Top Tracks</h3>
+      <ng-container *ngIf="topTracks$ | async as tracks">
+        <app-list [list]="tracks">
+          <ng-template #listItemTemplate let-item="item" let-index="index">
+            <app-top-item
+              [name]="item.name"
+              [subText]="item.artists | join: 'name' | titlecase"
+            >
+              {{ index + 1 }}
+            </app-top-item>
+          </ng-template>
+        </app-list>
+      </ng-container>
+    </div>
+  </div>
+</div>

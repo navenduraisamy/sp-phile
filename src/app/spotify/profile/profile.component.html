@@ -1,1 +1,10 @@
 {{ userProfile$ | async | json }}
+<ng-container *ngIf="userProfile$ | async as user">
+    <ng-container *ngIf="user.images.length > 0; else defaultPicture">
+        <img src="user.images[0].url" alt="" width="64px">
+    </ng-container>
+</ng-container>
+
+<ng-template #defaultPicture>
+    <img src="assets/images/koala.png" alt="">
+</ng-template>

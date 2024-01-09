@@ -7,6 +7,7 @@ import { TracksComponent } from './tracks/tracks.component';
 import { ArtistsComponent } from './artists/artists.component';
 import { TopItemComponent } from './top-item/top-item.component';
 import { JoinPipe } from './pipes/join.pipe';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   { path:"", component: MontlyWrappedComponent }
@@ -19,7 +20,8 @@ const routes: Routes = [
     TracksComponent,
     ArtistsComponent,
     TopItemComponent,
-    JoinPipe
+    JoinPipe,
+    ListComponent
   ],
   imports: [
     CommonModule,
