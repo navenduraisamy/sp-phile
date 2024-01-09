@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: "Barlo-Regular";
+    src: url(assets/fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(assets/fonts/Inter-Regular.ttf);
+}
+
+body {
+    font-family: "Inter-Regular";
+}
+

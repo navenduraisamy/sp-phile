@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { SpotifyArtist, SpotifyTopItemsCollection, SpotifyTrack, SpotifyUser } from '../spotify/interfaces/spotify-types';
 
 @Injectable({
   providedIn: 'root'
@@ -10,15 +11,21 @@ export class SpotifyService {
 
   constructor(private readonly http: HttpClient) { }
 
-  getProfile(): Observable<any> {
-    return this.http.get("https://api.spotify.com/v1/me");
+  getProfile(): Observable<SpotifyUser> {
+    return this.http.get<any>("https://api.spotify.com/v1/me").pipe(
+      map((response) => ({ ...response, name: response.display_name }) as SpotifyUser)
+    );
   }
 
-  getTopTracksOfUser(): Observable<any> {
-    return this.http.get('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5&offset=0');
+  getTopTracksOfUser(): Observable<SpotifyTrack[]> {
+    return this.http.get<SpotifyTopItemsCollection>('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5&offset=0').pipe(
+      map((respose) => respose.items as SpotifyTrack[])
+    );
   }
 
-  getTopArtistsOfUser(): Observable<any> {
-    return this.http.get('https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5&offset=0');
+  getTopArtistsOfUser(): Observable<SpotifyArtist[]> {
+    return this.http.get<SpotifyTopItemsCollection>('https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5&offset=0').pipe(
+      map((response) => response.items as SpotifyArtist[])
+    );
   }
 }

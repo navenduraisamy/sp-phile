@@ -7,15 +7,9 @@ import { SpotifyService } from 'src/app/services/spotify.service';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.scss']
 })
-export class ProfileComponent implements OnInit {
-  userProfile?: Observable<any>;
+export class ProfileComponent {
+  userProfile$ = this.spotify.getProfile();
 
-  constructor(private spotifyService: SpotifyService) { }
-
-  ngOnInit(): void {
-    this.userProfile = this.spotifyService.getProfile();
-  }
-
-  
+  constructor(private spotify: SpotifyService) { }
 
 }

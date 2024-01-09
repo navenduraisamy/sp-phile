@@ -5,6 +5,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MontlyWrappedComponent } from './montly-wrapped/montly-wrapped.component';
 import { TracksComponent } from './tracks/tracks.component';
 import { ArtistsComponent } from './artists/artists.component';
+import { TopItemComponent } from './top-item/top-item.component';
+import { JoinPipe } from './pipes/join.pipe';
 
 const routes: Routes = [
   { path:"", component: MontlyWrappedComponent }
@@ -15,7 +17,9 @@ const routes: Routes = [
     ProfileComponent,
     MontlyWrappedComponent,
     TracksComponent,
-    ArtistsComponent
+    ArtistsComponent,
+    TopItemComponent,
+    JoinPipe
   ],
   imports: [
     CommonModule,
