@@ -2,10 +2,8 @@
 
 .item-container {
     margin: 10px 0;
-    border-bottom: 1px solid $secondary-color;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     gap: 2rem;
     padding: 15px;
 
@@ -15,10 +13,18 @@
     }
 
     .text-content {
-        text-align: right;
-        p {
-            color: $secondary-color;
+        // text-align: right;
+        a {
+            color: $accent-color2;
             font-size: 1.5rem;
+            display: block;
+            text-decoration: none;
         }
     }
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+
+    
 }

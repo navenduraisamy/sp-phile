@@ -8,6 +8,9 @@ import { ArtistsComponent } from './artists/artists.component';
 import { TopItemComponent } from './top-item/top-item.component';
 import { JoinPipe } from './pipes/join.pipe';
 import { ListComponent } from './list/list.component';
+import { ImgDisplayComponent } from './img-display/img-display.component';
+import { AveragePipe } from './pipes/average.pipe';
+import { StatComponent } from './stat/stat.component';
 
 const routes: Routes = [
   { path:"", component: MontlyWrappedComponent }
@@ -21,7 +24,10 @@ const routes: Routes = [
     ArtistsComponent,
     TopItemComponent,
     JoinPipe,
-    ListComponent
+    ListComponent,
+    ImgDisplayComponent,
+    AveragePipe,
+    StatComponent
   ],
   imports: [
     CommonModule,

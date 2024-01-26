@@ -1,19 +1,8 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <h3 class="title">Top Artists</h3>
-      <ng-container *ngIf="topArtists$ | async as artists">
-        <app-list [list]="artists">
-          <ng-template #listItemTemplate let-item="item" let-index="index">
-            <app-top-item
-              [name]="item.name"
-              [subText]="item.genres | join | titlecase"
-            >
-              {{ index + 1 }}
-            </app-top-item>
-          </ng-template>
-        </app-list>
-      </ng-container>
-    </div>
+<div class="row mt-4 mt-md-0">
+  <div class="col-12">
+    <h5 class="mb-4">Top Artists</h5>
+    <ng-container *ngIf="topArtists$ | async as artists">
+      <p *ngFor="let artist of artists">{{ artist.name }}</p>
+    </ng-container>
   </div>
 </div>

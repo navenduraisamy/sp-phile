@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ExternalUrls } from '../interfaces/spotify-types';
 
 @Component({
   selector: 'app-top-item',
@@ -12,6 +13,9 @@ export class TopItemComponent implements OnInit {
 
   @Input()
   subText: string = "";
+
+  @Input()
+  externalUrl!: ExternalUrls;
   
 
   constructor() { }

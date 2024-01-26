@@ -9,7 +9,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class ArtistsComponent implements OnInit {
 
-  topArtists$: Observable<any> = this.spotify.getTopArtistsOfUser();
+  topArtists$ = this.spotify.getTopArtistsOfUser();
 
   constructor(private spotify: SpotifyService) { }
 

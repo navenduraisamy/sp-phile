@@ -9,7 +9,7 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class TracksComponent implements OnInit {
 
-  topTracks$ = this.spotify.getTopTracksOfUser();
+  topTracks$ = this.spotify.getTopTracksOfUser(5);
   constructor(private spotify: SpotifyService) { }
 
   ngOnInit(): void {

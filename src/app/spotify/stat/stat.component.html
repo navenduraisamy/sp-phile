@@ -1,0 +1,17 @@
+<h5 class="mb-4">Tracks' average popularity</h5>
+<ng-container *ngIf="stat | async as popularity">
+    <h1>{{ popularity }}</h1>
+    <div class="row">
+        <div class="col-lg-8">
+            <small class="text-light bg-success">
+                {{
+                popularity < 50
+                ? "Embrace the uniqueness of your music taste, as you navigate a landscape filled with
+                hidden musical treasures."
+                : "You are in tune with the beats that resonate widely
+                making your playlist delightful celebration of shared musical joy"
+                }}
+            </small>
+        </div>
+    </div>
+</ng-container>

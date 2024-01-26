@@ -1,9 +1,9 @@
-<div class="item-container">
+<div class="item-container rounded">
   <div class="number-content">
     <ng-content></ng-content>
   </div>
   <div class="text-content">
-    <p>{{ name }}</p>
+    <a [href]="externalUrl.spotify">{{ name }}</a>
     <small>{{ subText }}</small>
   </div>
 </div>
