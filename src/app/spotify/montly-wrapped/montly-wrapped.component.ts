@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { toJpeg } from 'html-to-image';
+import { SpotifyService } from 'src/app/services/spotify.service';
 
 @Component({
   selector: 'app-montly-wrapped',
@@ -8,7 +9,7 @@ import { toJpeg } from 'html-to-image';
 })
 export class MontlyWrappedComponent {
 
-  constructor() { }
+  constructor(private spotify: SpotifyService) { }
 
   downloadImage(template: HTMLDivElement): void {
     toJpeg(template,  { quality: 1, style: { background: "white" } })
@@ -19,6 +20,10 @@ export class MontlyWrappedComponent {
         link.click();
       })
       .catch((err: Error) => console.error(`Error: Could not download image. \n ${err.message}`))
+  }
+
+  createPlaylist(): void {
+    this.spotify.createPlayList().subscribe();
   }
 
 }

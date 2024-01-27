@@ -12,6 +12,7 @@ export class AuthService {
 
   private readonly CLIENT_ID: string = environment.client_id;
   private readonly REDIRECT_URL: string = environment.redirect_url;
+  private readonly scopes = ["user-read-private", "user-read-email", "user-top-read", "playlist-modify-public"];
   private code?: string;
 
   constructor(
@@ -64,7 +65,7 @@ export class AuthService {
 
     this.generateCodeChallenge(codeVerifier).then(codeChallenge => {
       let state = this.generateRandomString(16);
-      let scope = 'user-read-private user-read-email user-top-read';
+      let scope = this.scopes.join(" ");
 
       localStorage.setItem('code_verifier', codeVerifier);
 

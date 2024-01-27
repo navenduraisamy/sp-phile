@@ -3,6 +3,7 @@ export interface SpotifyUser {
     external_urls: ExternalUrls;
     email: string;
     images: SpotifyImage[];
+    id: string;
 }
 
 export interface SpotifyTopItemsCollection {
@@ -11,6 +12,7 @@ export interface SpotifyTopItemsCollection {
 
 export interface SpotifyTrack {
     name: string;
+    id: string;
     popularity:number;
     external_urls: ExternalUrls;
     artists: SpotifyArtist[];
@@ -32,4 +34,9 @@ export interface SpotifyImage {
     height: number;
     width: number;
     url: string;
+}
+
+export interface SpotifyPlaylist {
+    id: string;
+    name: string;
 }
