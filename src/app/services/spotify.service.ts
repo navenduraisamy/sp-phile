@@ -17,14 +17,15 @@ export class SpotifyService {
     );
   }
 
-  getTopTracksOfUser(): Observable<SpotifyTrack[]> {
-    return this.http.get<SpotifyTopItemsCollection>('https://api.spotify.com/v1/me/top/tracks?time_range=short_term&limit=5&offset=0').pipe(
+  getTopTracksOfUser(count: number): Observable<SpotifyTrack[]> {
+    count = Math.min(count, 50);
+    return this.http.get<SpotifyTopItemsCollection>(`https://api.spotify.com/v1/me/top/tracks?time_range=long_term&limit=${count}&offset=0`).pipe(
       map((respose) => respose.items as SpotifyTrack[])
     );
   }
 
   getTopArtistsOfUser(): Observable<SpotifyArtist[]> {
-    return this.http.get<SpotifyTopItemsCollection>('https://api.spotify.com/v1/me/top/artists?time_range=short_term&limit=5&offset=0').pipe(
+    return this.http.get<SpotifyTopItemsCollection>('https://api.spotify.com/v1/me/top/artists?time_range=long_term&limit=5&offset=0').pipe(
       map((response) => response.items as SpotifyArtist[])
     );
   }

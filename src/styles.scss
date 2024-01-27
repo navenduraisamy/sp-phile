@@ -10,21 +10,30 @@
     src: url(assets/fonts/Inter-Regular.ttf);
 }
 
+@font-face {
+    font-family: "ShadowsIntoLight-Regular";
+    src: url(assets/fonts/ShadowsIntoLight-Regular.ttf);
+}
+
 @import "variables.scss";
 
-
 body {
-    background-color: $dominant-color;
     font-family: "Inter-Regular";
-    color: #fff;
 }
 
 p {
     margin: 0;
 }
 
+@media screen and (width >= 768px) {
+    .container {
+        max-width: 70vw !important;
+    }
+}
+
+
+
 .title {
-    color: $secondary-color;
     font-weight: bolder;
     letter-spacing: 10px;
-  }
+}
