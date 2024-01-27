@@ -15,6 +15,11 @@
     src: url(assets/fonts/ShadowsIntoLight-Regular.ttf);
 }
 
+@font-face {
+    font-family: "GlassAntiqua-Regular";
+    src: url(assets/fonts/GlassAntiqua-Regular.ttf);
+}
+
 @import "variables.scss";
 
 body {
@@ -36,4 +41,10 @@ p {
 .title {
     font-weight: bolder;
     letter-spacing: 10px;
+}
+
+.clickable {
+    &:hover {
+        cursor: pointer;
+    }
 }

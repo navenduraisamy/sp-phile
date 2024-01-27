@@ -1,3 +1,15 @@
 <ng-container *ngIf="userProfile$ | async as user">
-    <p>{{ user.name | uppercase }}</p>
+    <ng-container *ngIf="user.images.length > 0; else defaultPicture">
+        <div class="mx-2">
+            <a href="{{ user.external_urls.spotify }}" target="_blank">
+                <img src="{{ user.images[0].url }}" alt="" class="rounded-circle" width="40px">
+            </a>
+            
+            <!-- <p class="mx-2">{{ user.name | uppercase }}</p> -->
+        </div>
+    </ng-container>
 </ng-container>
+
+<ng-template #defaultPicture>
+    <img src="assets/images/koala.png" alt="">
+</ng-template>

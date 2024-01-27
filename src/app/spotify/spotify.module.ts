@@ -11,6 +11,7 @@ import { ListComponent } from './list/list.component';
 import { ImgDisplayComponent } from './img-display/img-display.component';
 import { AveragePipe } from './pipes/average.pipe';
 import { StatComponent } from './stat/stat.component';
+import { ActionComponent } from './action/action.component';
 
 const routes: Routes = [
   { path:"", component: MontlyWrappedComponent }
@@ -27,7 +28,8 @@ const routes: Routes = [
     ListComponent,
     ImgDisplayComponent,
     AveragePipe,
-    StatComponent
+    StatComponent,
+    ActionComponent
   ],
   imports: [
     CommonModule,
