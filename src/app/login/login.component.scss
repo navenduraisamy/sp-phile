@@ -1,0 +1,18 @@
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 999em;
+
+    &:hover {
+        background-color: rgb(32, 32, 32);
+    }
+}
