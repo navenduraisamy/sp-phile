@@ -9,13 +9,13 @@ const routes: Routes = [
     component: LoginComponent
   },
   { 
-    path: "sp-phile", 
+    path: "stats", 
     loadChildren: () => import("./spotify/spotify.module").then((module) => module.SpotifyModule),
     canActivate: [AuthGuard]
   },
   {
     path:"**",
-    redirectTo:"sp-phile"
+    redirectTo:"stats"
   }
 ];
 

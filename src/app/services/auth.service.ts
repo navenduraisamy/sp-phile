@@ -55,7 +55,7 @@ export class AuthService {
         if (response !== null) {
           this.tokenService.setAccessToken(response.access_token);
           this.tokenService.setRefreshToken(response.refresh_token);
-          this.router.navigate(['sp-phile']);
+          this.router.navigate(['stats']);
         }
       });
   }
