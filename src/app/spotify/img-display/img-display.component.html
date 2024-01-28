@@ -1,0 +1,9 @@
+<ng-container *ngIf="(topArtist | async) as artist">
+    <ng-content *ngTemplateOutlet="imgTemplate; context: { image: artist.images[0] }"></ng-content>
+</ng-container>
+
+<ng-template #imgTemplate let-image="image">
+    <div class="img-container">
+        <img src="{{ image.url }}" width="100%" alt="">
+    </div>
+</ng-template>

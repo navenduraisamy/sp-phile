@@ -1,0 +1,8 @@
+  <div class="row">
+    <div class="col-12">
+      <h5 class="mb-4">Top Tracks</h5>
+      <ng-container *ngIf="topTracks$ | async as tracks">
+        <p *ngFor="let track of tracks">{{ track.name }}</p>
+      </ng-container>
+    </div>
+  </div>

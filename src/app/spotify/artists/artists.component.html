@@ -1,0 +1,8 @@
+<div class="row mt-4 mt-md-0">
+  <div class="col-12">
+    <h5 class="mb-4">Top Artists</h5>
+    <ng-container *ngIf="topArtists$ | async as artists">
+      <p *ngFor="let artist of artists">{{ artist.name }}</p>
+    </ng-container>
+  </div>
+</div>

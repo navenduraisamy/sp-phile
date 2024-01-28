@@ -1,1 +1,55 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face {
+    font-family: "Barlo-Regular";
+    src: url(assets/fonts/Barlow-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Inter-Regular";
+    src: url(assets/fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: "ShadowsIntoLight-Regular";
+    src: url(assets/fonts/ShadowsIntoLight-Regular.ttf);
+}
+
+@font-face {
+    font-family: "GlassAntiqua-Regular";
+    src: url(assets/fonts/GlassAntiqua-Regular.ttf);
+}
+
+@import "variables.scss";
+
+body {
+    margin: 0;
+    font-family: "Inter-Regular";
+}
+
+p {
+    margin: 0;
+}
+
+@media screen and (width >= 768px) {
+    .container {
+        max-width: 70vw !important;
+    }
+}
+
+.title {
+    font-weight: bolder;
+    letter-spacing: 10px;
+}
+
+.clickable {
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.bootstrap-icon {
+    font-family:'Bootstrap-icons';
+    font-weight: 700 !important;
+}

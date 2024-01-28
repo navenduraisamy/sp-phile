@@ -1,0 +1,30 @@
+@import "/src/variables.scss";
+
+.item-container {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 15px;
+
+    .number-content {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+
+    .text-content {
+        // text-align: right;
+        a {
+            color: $accent-color2;
+            font-size: 1.5rem;
+            display: block;
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        background-color: $secondary-color;
+    }
+
+    
+}
