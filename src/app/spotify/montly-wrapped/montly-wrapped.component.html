@@ -41,10 +41,16 @@
         </div>
         <div class="action-container">
             <app-action>
-                <i class="bi bi-plus-lg" (click)="createPlaylist()"></i>
+                <div class="bootstrap-icon" (click)="createPlaylist()" [class.green]="isActionComplete==='PL'">
+                    <p>{{ addToPlaylistIcon }}</p>
+                </div>
             </app-action>
             <app-action>
-                <i class="bi bi-arrow-down" (click)="downloadImage(capture)"></i>
+                <div class="bootstrap-icon" (click)="downloadImage(capture)" [class.green]="isActionComplete==='DI'">
+                    <p> 
+                        {{ downloadImageIcon }}
+                    </p>
+                </div>
             </app-action>
         </div>
     </div>

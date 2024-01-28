@@ -12,6 +12,8 @@ import { ImgDisplayComponent } from './img-display/img-display.component';
 import { AveragePipe } from './pipes/average.pipe';
 import { StatComponent } from './stat/stat.component';
 import { ActionComponent } from './action/action.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
 
 const routes: Routes = [
   { path:"", component: MontlyWrappedComponent }
@@ -33,7 +35,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatSnackBarModule
+    
   ]
 })
 export class SpotifyModule { }

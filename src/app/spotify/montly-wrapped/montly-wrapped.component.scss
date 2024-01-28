@@ -23,3 +23,11 @@ a {
         font-weight: 700 !important;
     }
 }
+
+
+.green {
+    p {
+        color: green;
+        filter: drop-shadow(3px 3px 2px green);
+    }
+}

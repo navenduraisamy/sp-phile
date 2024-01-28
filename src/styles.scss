@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
 @font-face {
     font-family: "Barlo-Regular";
@@ -23,6 +24,7 @@
 @import "variables.scss";
 
 body {
+    margin: 0;
     font-family: "Inter-Regular";
 }
 
@@ -36,8 +38,6 @@ p {
     }
 }
 
-
-
 .title {
     font-weight: bolder;
     letter-spacing: 10px;
@@ -47,4 +47,9 @@ p {
     &:hover {
         cursor: pointer;
     }
+}
+
+.bootstrap-icon {
+    font-family:'Bootstrap-icons';
+    font-weight: 700 !important;
 }
